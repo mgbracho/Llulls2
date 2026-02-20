@@ -25,7 +25,10 @@
       <a class="nav-item" href="index.html">Contact</a>
     </nav>
     <div class="header-utils">
-      <button type="button" class="icon-btn" aria-label="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+      <button type="button" class="icon-btn cart-trigger" aria-label="Cart">
+        <span class="cart-count" id="cart-count" hidden>0</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </button>
     </div>
     <button type="button" class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </header>
@@ -48,7 +51,23 @@
     </div>
   </main>
 
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <div class="cart-panel" id="cart-panel" aria-hidden="true">
+    <div class="cart-panel__header">
+      <h2 class="cart-panel__title">Your Cart</h2>
+      <button type="button" class="cart-panel__close" id="cart-close" aria-label="Close cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-panel__body" id="cart-panel-body">
+      <p class="cart-empty" id="cart-empty">Your cart is empty.</p>
+      <ul class="cart-list" id="cart-list" hidden></ul>
+      <p class="cart-total" id="cart-total" hidden></p>
+    </div>
+  </div>
+
   <script src="products.js"></script>
+  <script src="cart.js"></script>
   <script src="product.js"></script>
   <script src="script.js"></script>
 </body>

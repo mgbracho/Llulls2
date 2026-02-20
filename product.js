@@ -73,16 +73,18 @@
       });
     });
 
-    // Add to cart (placeholder)
+    // Add to cart
     var addBtn = document.getElementById('add-to-cart-btn');
-    if (addBtn) {
+    if (addBtn && window.LlullsCart) {
       addBtn.addEventListener('click', function () {
         var selected = contentEl.querySelector('.size-option.selected');
         if (!selected) {
           alert('Please select a size.');
           return;
         }
-        alert('Added to cart! (This is a demo—no cart is connected yet.)');
+        var size = selected.getAttribute('data-size');
+        window.LlullsCart.addItem(product.id, product.name, size, product.price, product.image);
+        window.LlullsCart.openPanel();
       });
     }
   }
