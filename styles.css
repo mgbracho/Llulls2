@@ -150,6 +150,26 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 4px;
 }
 .utils-btn:hover { color: var(--accent); }
+
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.lang-sep {
+  color: var(--text-muted);
+  font-size: 13px;
+  user-select: none;
+}
+.lang-option {
+  min-width: 32px;
+  padding: 6px 8px;
+  font-weight: 500;
+}
+.lang-option.is-active {
+  color: var(--accent);
+}
+
 .icon-btn {
   background: none;
   border: none;

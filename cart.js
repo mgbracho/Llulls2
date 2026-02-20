@@ -73,22 +73,25 @@
     if (listEl) listEl.hidden = false;
     if (totalEl) totalEl.hidden = false;
 
+    var t = (window.LlullsI18n && window.LlullsI18n.t) ? window.LlullsI18n.t.bind(window.LlullsI18n) : function (k) { return k; };
+    var sizeLabel = t('size_label');
     var total = 0;
     listEl.innerHTML = cart.map(function (item, index) {
       var qty = item.quantity || 1;
       var price = parseFloat(item.price) || 0;
       var lineTotal = price * qty;
       total += lineTotal;
-      var priceStr = price.toFixed(2).replace('.', ',');
       var lineStr = (lineTotal).toFixed(2).replace('.', ',');
+      var displayName = (window.LlullsI18n && item.productId) ? t('product_' + item.productId + '_name') : item.name;
+      if (!displayName) displayName = item.name;
       return (
         '<li class="cart-item" data-index="' + index + '">' +
           '<div class="cart-item__image">' +
             (item.image ? '<img src="' + escapeHtml(item.image) + '" alt="" />' : '') +
           '</div>' +
           '<div class="cart-item__details">' +
-            '<span class="cart-item__name">' + escapeHtml(item.name) + '</span>' +
-            '<span class="cart-item__meta">Size ' + escapeHtml(item.size) + (qty > 1 ? ' · ' + qty + '×' : '') + '</span>' +
+            '<span class="cart-item__name">' + escapeHtml(displayName) + '</span>' +
+            '<span class="cart-item__meta">' + escapeHtml(sizeLabel) + ' ' + escapeHtml(item.size) + (qty > 1 ? ' · ' + qty + '×' : '') + '</span>' +
             '<span class="cart-item__price">€' + lineStr + ' EUR</span>' +
           '</div>' +
           '<button type="button" class="cart-item__remove" aria-label="Remove from cart" data-index="' + index + '">' +
@@ -99,7 +102,7 @@
     }).join('');
 
     var totalStr = total.toFixed(2).replace('.', ',');
-    totalEl.textContent = 'Total: €' + totalStr + ' EUR';
+    totalEl.textContent = (t('cart_total') || 'Total') + ': €' + totalStr + ' EUR';
 
     listEl.querySelectorAll('.cart-item__remove').forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -136,6 +139,9 @@
   }
 
   function init() {
+    window.addEventListener('languagechange', function (e) {
+      if (e.detail && e.detail.lang) refreshCartUI();
+    });
     var trigger = document.querySelector('.cart-trigger');
     var overlay = document.getElementById('cart-overlay');
     if (trigger) {

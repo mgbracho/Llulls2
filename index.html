@@ -11,7 +11,7 @@
 </head>
 <body>
   <!-- Promo banner -->
-  <div class="promo-banner">
+  <div class="promo-banner" data-i18n="promo_banner">
     FREE shipping in Europe on orders over €100 — Spain orders over €60
   </div>
 
@@ -22,40 +22,42 @@
     </a>
     <nav class="nav-main">
       <div class="nav-item dropdown">
-        <a href="#">Greyhound <span class="arrow">▼</span></a>
+        <a href="#" data-i18n="nav_greyhound">Greyhound ▼</a>
         <ul class="dropdown-menu">
-          <li><a href="#">Sleeveless Shirts</a></li>
-          <li><a href="#">Long Sleeve Shirts</a></li>
-          <li><a href="#">Sweatshirts</a></li>
-          <li><a href="#">Raincoats</a></li>
-          <li><a href="#">Fleece</a></li>
-          <li><a href="#">All</a></li>
+          <li><a href="#" data-i18n="nav_sleeveless">Sleeveless Shirts</a></li>
+          <li><a href="#" data-i18n="nav_long_sleeve">Long Sleeve Shirts</a></li>
+          <li><a href="#" data-i18n="nav_sweatshirts">Sweatshirts</a></li>
+          <li><a href="#" data-i18n="nav_raincoats">Raincoats</a></li>
+          <li><a href="#" data-i18n="nav_fleece">Fleece</a></li>
+          <li><a href="#" data-i18n="nav_all">All</a></li>
         </ul>
       </div>
       <div class="nav-item dropdown">
-        <a href="#">Whippet <span class="arrow">▼</span></a>
+        <a href="#" data-i18n="nav_whippet">Whippet ▼</a>
         <ul class="dropdown-menu">
-          <li><a href="#">Long Sleeve Shirts</a></li>
-          <li><a href="#">Raincoats</a></li>
-          <li><a href="#">Fleece</a></li>
-          <li><a href="#">All</a></li>
+          <li><a href="#" data-i18n="nav_long_sleeve">Long Sleeve Shirts</a></li>
+          <li><a href="#" data-i18n="nav_raincoats">Raincoats</a></li>
+          <li><a href="#" data-i18n="nav_fleece">Fleece</a></li>
+          <li><a href="#" data-i18n="nav_all">All</a></li>
         </ul>
       </div>
       <div class="nav-item dropdown">
-        <a href="#">Accesorios <span class="arrow">▼</span></a>
+        <a href="#" data-i18n="nav_accesorios">Accesorios ▼</a>
         <ul class="dropdown-menu">
-          <li><a href="#">Cuellos / Buffs</a></li>
+          <li><a href="#" data-i18n="nav_cuellos">Cuellos / Buffs</a></li>
         </ul>
       </div>
-      <a class="nav-item" href="#">Sizes guide</a>
-      <a class="nav-item" href="#">Contact</a>
+      <a class="nav-item" href="#" data-i18n="nav_sizes_guide">Sizes guide</a>
+      <a class="nav-item" href="#" data-i18n="nav_contact">Contact</a>
     </nav>
     <div class="header-utils">
       <div class="utils-dropdown">
         <button type="button" class="utils-btn">Spain | EUR € <span class="arrow">▼</span></button>
       </div>
-      <div class="utils-dropdown">
-        <button type="button" class="utils-btn">English <span class="arrow">▼</span></button>
+      <div class="lang-selector">
+        <button type="button" class="lang-option utils-btn" data-lang="es" aria-pressed="false">ES</button>
+        <span class="lang-sep">/</span>
+        <button type="button" class="lang-option utils-btn" data-lang="en" aria-pressed="true">EN</button>
       </div>
       <button type="button" class="icon-btn" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
       <button type="button" class="icon-btn" aria-label="Log in"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button>
@@ -75,8 +77,8 @@
       <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&h=700&fit=crop" alt="Dog wearing colorful striped shirt" />
     </div>
     <div class="hero-overlay">
-      <h1 class="hero-title">Colorful Clothes for Greyhounds and Whippets</h1>
-      <a href="#products" class="btn btn-hero">View Store</a>
+      <h1 class="hero-title" data-i18n="hero_title">Colorful Clothes for Greyhounds and Whippets</h1>
+      <a href="#products" class="btn btn-hero" data-i18n="hero_view_store">View Store</a>
     </div>
   </section>
 
@@ -89,7 +91,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=700&fit=crop" alt="Fleece Cielo - Greyhound" />
             </div>
-            <h3 class="product-name">Fleece Cielo - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_fleece-cielo_name">Fleece Cielo - Greyhound</h3>
             <p class="product-price">€68,00 EUR</p>
           </a>
         </article>
@@ -98,7 +100,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=700&fit=crop" alt="Fleece Confeti Blanco - Greyhound" />
             </div>
-            <h3 class="product-name">Fleece Confeti Blanco - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_fleece-confeti-blanco_name">Fleece Confeti Blanco - Greyhound</h3>
             <p class="product-price">€68,00 EUR</p>
           </a>
         </article>
@@ -107,7 +109,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&h=700&fit=crop" alt="Fleece Blue - Greyhound" />
             </div>
-            <h3 class="product-name">Fleece Blue - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_fleece-blue_name">Fleece Blue - Greyhound</h3>
             <p class="product-price">€68,00 EUR</p>
           </a>
         </article>
@@ -116,7 +118,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=700&fit=crop" alt="Long-Sleeve Shirt Domingo - Greyhound" />
             </div>
-            <h3 class="product-name">Long-Sleeve Shirt Domingo - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_long-sleeve-domingo_name">Long-Sleeve Shirt Domingo - Greyhound</h3>
             <p class="product-price">€49,00 EUR</p>
           </a>
         </article>
@@ -125,7 +127,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=600&h=700&fit=crop" alt="Raincoat Nimbus - Greyhound" />
             </div>
-            <h3 class="product-name">Raincoat Nimbus - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_raincoat-nimbus_name">Raincoat Nimbus - Greyhound</h3>
             <p class="product-price">€65,00 EUR</p>
           </a>
         </article>
@@ -134,7 +136,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=600&h=700&fit=crop" alt="Raincoat Iris - Greyhound" />
             </div>
-            <h3 class="product-name">Raincoat Iris - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_raincoat-iris_name">Raincoat Iris - Greyhound</h3>
             <p class="product-price">€65,00 EUR</p>
           </a>
         </article>
@@ -143,7 +145,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1589941028473-2ac882fc5762?w=600&h=700&fit=crop" alt="Sleeveless Shirt Kawaii - Greyhound" />
             </div>
-            <h3 class="product-name">Sleeveless Shirt Kawaii - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_sleeveless-kawaii_name">Sleeveless Shirt Kawaii - Greyhound</h3>
             <p class="product-price">€45,00 EUR</p>
           </a>
         </article>
@@ -152,7 +154,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=700&fit=crop" alt="Sleeveless Shirt Flower Power - Greyhound" />
             </div>
-            <h3 class="product-name">Sleeveless Shirt Flower Power - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_sleeveless-flower-power_name">Sleeveless Shirt Flower Power - Greyhound</h3>
             <p class="product-price">€45,00 EUR</p>
           </a>
         </article>
@@ -161,13 +163,13 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=700&fit=crop" alt="Sleeveless Shirt Pink Latte - Greyhound" />
             </div>
-            <h3 class="product-name">Sleeveless Shirt Pink Latte - Greyhound</h3>
+            <h3 class="product-name" data-i18n="product_sleeveless-pink-latte_name">Sleeveless Shirt Pink Latte - Greyhound</h3>
             <p class="product-price">€45,00 EUR</p>
           </a>
         </article>
       </div>
       <div class="products-cta">
-        <a href="#" class="btn btn-outline">View all</a>
+        <a href="#" class="btn btn-outline" data-i18n="view_all">View all</a>
       </div>
     </div>
   </section>
@@ -175,15 +177,15 @@
   <!-- Whippet section -->
   <section class="collection">
     <div class="container">
-      <h2 class="section-title">New Whippet Clothing Collection</h2>
-      <p class="section-subtitle">We present the new collection of clothing for whippets.</p>
+      <h2 class="section-title" data-i18n="section_whippet_title">New Whippet Clothing Collection</h2>
+      <p class="section-subtitle" data-i18n="section_whippet_subtitle">We present the new collection of clothing for whippets.</p>
       <div class="product-grid">
         <article class="product-card">
           <a href="product.html?id=long-sleeve-lilax-whippet" class="product-link">
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&h=700&fit=crop" alt="Long-Sleeve Shirt Lilax - Whippet" />
             </div>
-            <h3 class="product-name">Long-Sleeve Shirt Lilax - Whippet</h3>
+            <h3 class="product-name" data-i18n="product_long-sleeve-lilax-whippet_name">Long-Sleeve Shirt Lilax - Whippet</h3>
             <p class="product-price">€40,00 EUR</p>
           </a>
         </article>
@@ -192,7 +194,7 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=700&fit=crop" alt="Long-Sleeve Shirt Celeste - Whippet" />
             </div>
-            <h3 class="product-name">Long-Sleeve Shirt Celeste - Whippet</h3>
+            <h3 class="product-name" data-i18n="product_long-sleeve-celeste-whippet_name">Long-Sleeve Shirt Celeste - Whippet</h3>
             <p class="product-price">€40,00 EUR</p>
           </a>
         </article>
@@ -201,13 +203,13 @@
             <div class="product-image">
               <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=600&h=700&fit=crop" alt="Fleece White Confetti - Whippet" />
             </div>
-            <h3 class="product-name">Fleece White Confetti - Whippet</h3>
+            <h3 class="product-name" data-i18n="product_fleece-white-confetti-whippet_name">Fleece White Confetti - Whippet</h3>
             <p class="product-price">€58,00 EUR</p>
           </a>
         </article>
       </div>
       <div class="products-cta">
-        <a href="#" class="btn btn-outline">View all</a>
+        <a href="#" class="btn btn-outline" data-i18n="view_all">View all</a>
       </div>
     </div>
   </section>
@@ -216,9 +218,9 @@
   <section class="snoods-cta">
     <div class="container split">
       <div class="snoods-content">
-        <h2 class="section-title">Snoods</h2>
-        <p>These snoods are the perfect accessory to add style and color to your greyhound. Made with <strong>jersey knit fabric</strong>, soft, stretchy, and very comfortable.</p>
-        <a href="#" class="btn btn-outline">Discover them</a>
+        <h2 class="section-title" data-i18n="snoods_title">Snoods</h2>
+        <p data-i18n="snoods_text" data-i18n-html="1">These snoods are the perfect accessory to add style and color to your greyhound. Made with <strong>jersey knit fabric</strong>, soft, stretchy, and very comfortable.</p>
+        <a href="#" class="btn btn-outline" data-i18n="snoods_cta">Discover them</a>
       </div>
       <div class="snoods-image">
         <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=500&h=400&fit=crop" alt="Dog with snood" />
@@ -229,9 +231,9 @@
   <!-- About -->
   <section class="about">
     <div class="container narrow">
-      <p class="about-lead">We specialize in dog clothing for sighthounds, combining style, comfort, and a perfect fit for their slender bodies. Discover our sweatshirts, t-shirts, and pajamas designed to protect their sensitive skin all year round.</p>
-      <h2 class="section-title">Handcrafted design for unique greyhounds</h2>
-      <p>Handmade from the pattern to the final stitch. Our designs are created to meet their standard. That's why we sew with intention and with emotion.</p>
+      <p class="about-lead" data-i18n="about_lead">We specialize in dog clothing for sighthounds, combining style, comfort, and a perfect fit for their slender bodies. Discover our sweatshirts, t-shirts, and pajamas designed to protect their sensitive skin all year round.</p>
+      <h2 class="section-title" data-i18n="about_title">Handcrafted design for unique greyhounds</h2>
+      <p data-i18n="about_text">Handmade from the pattern to the final stitch. Our designs are created to meet their standard. That's why we sew with intention and with emotion.</p>
     </div>
   </section>
 
@@ -240,38 +242,38 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_quick_links">Quick Links</h4>
           <ul>
-            <li><a href="#">Greyhound Clothes</a></li>
-            <li><a href="#">Greyhound Sleeveless Shirts</a></li>
-            <li><a href="#">Greyhound Long Sleeve Shirts</a></li>
-            <li><a href="#">Whippet Clothes</a></li>
-            <li><a href="#">Whippet Fleece</a></li>
+            <li><a href="#" data-i18n="footer_greyhound_clothes">Greyhound Clothes</a></li>
+            <li><a href="#" data-i18n="footer_greyhound_sleeveless">Greyhound Sleeveless Shirts</a></li>
+            <li><a href="#" data-i18n="footer_greyhound_long">Greyhound Long Sleeve Shirts</a></li>
+            <li><a href="#" data-i18n="footer_whippet_clothes">Whippet Clothes</a></li>
+            <li><a href="#" data-i18n="footer_whippet_fleece">Whippet Fleece</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Useful information</h4>
+          <h4 data-i18n="footer_useful">Useful information</h4>
           <ul>
-            <li><a href="#">Sizes guide</a></li>
-            <li><a href="#">Shipping & returns</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" data-i18n="footer_sizes">Sizes guide</a></li>
+            <li><a href="#" data-i18n="footer_shipping">Shipping & returns</a></li>
+            <li><a href="#" data-i18n="footer_about">About us</a></li>
+            <li><a href="#" data-i18n="footer_faq">FAQ</a></li>
+            <li><a href="#" data-i18n="nav_contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4 data-i18n="footer_contact">Contact</h4>
           <p><a href="mailto:hello@example.com">hello@example.com</a></p>
           <p>+34 603 356 954</p>
           <p>Barcelona, Spain</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Llull's. Handmade with care.</p>
+        <p data-i18n="copyright">© 2026 Llull's. Handmade with care.</p>
         <nav class="footer-legal">
-          <a href="#">Privacy policy</a>
-          <a href="#">Terms of service</a>
-          <a href="#">Shipping policy</a>
+          <a href="#" data-i18n="footer_privacy">Privacy policy</a>
+          <a href="#" data-i18n="footer_terms">Terms of service</a>
+          <a href="#" data-i18n="footer_shipping_policy">Shipping policy</a>
         </nav>
       </div>
     </div>
@@ -280,18 +282,19 @@
   <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
   <div class="cart-panel" id="cart-panel" aria-hidden="true">
     <div class="cart-panel__header">
-      <h2 class="cart-panel__title">Your Cart</h2>
+      <h2 class="cart-panel__title" data-i18n="cart_title">Your Cart</h2>
       <button type="button" class="cart-panel__close" id="cart-close" aria-label="Close cart">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
     <div class="cart-panel__body" id="cart-panel-body">
-      <p class="cart-empty" id="cart-empty">Your cart is empty.</p>
+      <p class="cart-empty" id="cart-empty" data-i18n="cart_empty">Your cart is empty.</p>
       <ul class="cart-list" id="cart-list" hidden></ul>
       <p class="cart-total" id="cart-total" hidden></p>
     </div>
   </div>
 
+  <script src="i18n.js"></script>
   <script src="cart.js"></script>
   <script src="script.js"></script>
 </body>
