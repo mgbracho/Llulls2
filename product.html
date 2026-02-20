@@ -21,7 +21,7 @@
     <nav class="nav-main">
       <a class="nav-item" href="index.html" data-i18n="nav_home">Home</a>
       <a class="nav-item" href="index.html#products" data-i18n="nav_shop">Shop</a>
-      <a class="nav-item" href="index.html#products" data-i18n="nav_sizes_guide">Sizes guide</a>
+      <a class="nav-item" href="guia-tallas.html" data-i18n="nav_sizes_guide">Sizes guide</a>
       <a class="nav-item" href="index.html" data-i18n="nav_contact">Contact</a>
     </nav>
     <div class="header-utils">
@@ -55,6 +55,64 @@
       </div>
     </div>
   </main>
+
+  <div class="size-guide-modal-overlay" id="size-guide-modal-overlay" aria-hidden="true">
+    <div class="size-guide-modal">
+      <div class="size-guide-modal__header">
+        <h2 class="size-guide-modal__title" data-i18n="size_guide_title">Greyhound Size Guide</h2>
+        <button type="button" class="size-guide-modal__close" id="size-guide-modal-close" aria-label="Close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="size-guide-modal__body">
+        <div class="size-guide__drawing">
+          <svg class="greyhound-drawing" viewBox="0 0 280 120" xmlns="http://www.w3.org/2000/svg" aria-labelledby="modal-drawing-desc">
+            <title id="modal-drawing-desc">Greyhound side view showing chest and back measurement points</title>
+            <path class="greyhound-outline" d="M30 75 L45 55 L65 45 L85 42 L95 48 L98 58 L92 72 L85 85 L78 95 L72 105 L70 112 L75 115 L95 113 L115 108 L135 102 L155 95 L175 88 L195 82 L215 78 L235 75 L250 72 L260 68 L265 62 L262 55 L252 50 L240 48 L225 50 L210 55 L195 60 L178 64 L160 67 L140 70 L120 72 L100 74 L80 75 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path class="measure-line" d="M 78 95 Q 95 72 115 88 Q 125 98 112 108 Q 92 115 78 95" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+            <text x="98" y="65" class="measure-label" text-anchor="middle">Chest</text>
+            <line class="measure-line" x1="88" y1="90" x2="245" y2="72" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+            <text x="165" y="78" class="measure-label" text-anchor="middle">Back</text>
+          </svg>
+        </div>
+        <div class="size-guide__table-wrap">
+          <table class="size-guide__table">
+            <thead>
+              <tr>
+                <th data-i18n="size_guide_size">Size</th>
+                <th data-i18n="size_guide_chest">Chest (cm)</th>
+                <th data-i18n="size_guide_back">Back (cm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="size_guide_small">SMALL</td>
+                <td>62–75</td>
+                <td>60–70</td>
+              </tr>
+              <tr>
+                <td data-i18n="size_guide_medium">MEDIUM</td>
+                <td>76–81</td>
+                <td>71–76</td>
+              </tr>
+              <tr>
+                <td data-i18n="size_guide_large">LARGE</td>
+                <td>82–86</td>
+                <td>77–84</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="size-guide__text">
+          <h2 data-i18n="size_guide_how_title">How to measure</h2>
+          <p data-i18n="size_guide_how_text" data-i18n-html="1">Measure your greyhound with a soft tape measure. <strong>Chest</strong>: wrap the tape around the widest part of the chest, just behind the front legs. <strong>Back</strong>: measure from the base of the neck (where the collar sits) along the spine to the base of the tail. Keep the tape snug but not tight. Compare your measurements with the table above to find the best fit.</p>
+        </div>
+        <div class="size-guide__notice">
+          <p data-i18n="size_guide_notice">If your dog's measurements fall between two sizes, choose the larger size for a more comfortable fit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
   <div class="cart-panel" id="cart-panel" aria-hidden="true">

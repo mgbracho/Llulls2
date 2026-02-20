@@ -31,6 +31,7 @@
           '<h1 class="product-detail__name">' + escapeHtml(name) + '</h1>' +
           '<p class="product-detail__price">€' + product.price + ' EUR</p>' +
           '<p class="product-detail__description">' + escapeHtml(desc) + '</p>' +
+          '<a href="#" class="size-guide-link" id="size-guide-trigger">' + escapeHtml(getT('size_guide_link')) + '</a>' +
           '<div class="product-detail__size">' +
             '<label class="product-detail__size-label">' + escapeHtml(sizeLabel) + '</label>' +
             '<div class="product-detail__size-options">' +
@@ -54,6 +55,14 @@
   var currentProductId = null;
 
   function attachProductListeners(contentEl, product) {
+    var sizeGuideTrigger = document.getElementById('size-guide-trigger');
+    if (sizeGuideTrigger) {
+      sizeGuideTrigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        var overlay = document.getElementById('size-guide-modal-overlay');
+        if (overlay) overlay.classList.add('is-open');
+      });
+    }
     var sizeOptions = contentEl.querySelectorAll('.size-option');
     sizeOptions.forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -123,9 +132,28 @@
     });
   }
 
+  function initSizeGuideModal() {
+    var overlay = document.getElementById('size-guide-modal-overlay');
+    var closeBtn = document.getElementById('size-guide-modal-close');
+    function closeModal() {
+      if (overlay) overlay.classList.remove('is-open');
+    }
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay && overlay.classList.contains('is-open')) closeModal();
+    });
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', function () {
+      init();
+      initSizeGuideModal();
+    });
   } else {
     init();
+    initSizeGuideModal();
   }
 })();

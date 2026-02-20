@@ -58,6 +58,18 @@
       meta_title_home: "Llull's | Dog Clothing for Greyhounds & Whippets",
       meta_title_product: "Product | Llull's",
       size_label: 'Size',
+      size_guide_link: 'Size Guide',
+      size_guide_title: 'Greyhound Size Guide',
+      size_guide_size: 'Size',
+      size_guide_chest: 'Chest (cm)',
+      size_guide_back: 'Back (cm)',
+      size_guide_small: 'SMALL',
+      size_guide_medium: 'MEDIUM',
+      size_guide_large: 'LARGE',
+      size_guide_how_title: 'How to measure',
+      size_guide_how_text: 'Measure your greyhound with a soft tape measure. **Chest**: wrap the tape around the widest part of the chest, just behind the front legs. **Back**: measure from the base of the neck (where the collar sits) along the spine to the base of the tail. Keep the tape snug but not tight. Compare your measurements with the table above to find the best fit.',
+      size_guide_notice: 'If your dog\'s measurements fall between two sizes, choose the larger size for a more comfortable fit.',
+      meta_title_size_guide: "Size Guide | Llull's",
       'product_fleece-cielo_name': 'Fleece Cielo - Greyhound',
       'product_fleece-cielo_description': 'Full-body fleece with ergonomic fit for deep chests. Soft, warm, and perfect for cooler days. Features our signature rainbow pattern in comfortable, breathable fabric.',
       'product_fleece-confeti-blanco_name': 'Fleece Confeti Blanco - Greyhound',
@@ -137,6 +149,18 @@
       meta_title_home: "Llull's | Ropa para galgos y whippets",
       meta_title_product: "Producto | Llull's",
       size_label: 'Talla',
+      size_guide_link: 'Guía de tallas',
+      size_guide_title: 'Guía de tallas para galgos',
+      size_guide_size: 'Talla',
+      size_guide_chest: 'Pecho (cm)',
+      size_guide_back: 'Lomo (cm)',
+      size_guide_small: 'PEQUEÑA',
+      size_guide_medium: 'MEDIANA',
+      size_guide_large: 'GRANDE',
+      size_guide_how_title: 'Cómo medir',
+      size_guide_how_text: 'Mide a tu galgo con una cinta métrica flexible. **Pecho**: rodea la cinta por la parte más ancha del pecho, justo detrás de las patas delanteras. **Lomo**: mide desde la base del cuello (donde va el collar) a lo largo del lomo hasta la base de la cola. Mantén la cinta ajustada pero no apretada. Compara tus medidas con la tabla para encontrar la talla adecuada.',
+      size_guide_notice: 'Si las medidas de tu perro están entre dos tallas, elige la talla más grande para un mejor ajuste.',
+      meta_title_size_guide: "Guía de tallas | Llull's",
       'product_fleece-cielo_name': 'Polar Cielo - Galgo',
       'product_fleece-cielo_description': 'Polar de cuerpo entero con ajuste ergonómico para pecho profundo. Suave, cálido e ideal para días fríos. Con nuestro estampado arcoíris en tejido cómodo y transpirable.',
       'product_fleece-confeti-blanco_name': 'Polar Confeti Blanco - Galgo',
@@ -212,7 +236,12 @@
     });
 
     document.documentElement.lang = lang === 'es' ? 'es' : 'en';
-    if (window.location.pathname.indexOf('product') === -1 && window.location.href.indexOf('product.html') === -1) {
+    var href = window.location.href;
+    if (href.indexOf('product.html') !== -1) {
+      /* product page title set by product.js */
+    } else if (href.indexOf('guia-tallas') !== -1) {
+      document.title = t('meta_title_size_guide');
+    } else {
       document.title = t('meta_title_home');
     }
 

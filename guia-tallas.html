@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Size Guide | Llull's</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="promo-banner" data-i18n="promo_banner">
+    FREE shipping in Europe on orders over €100 — Spain orders over €60
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-brand">Llull's</span>
+    </a>
+    <nav class="nav-main">
+      <a class="nav-item" href="index.html" data-i18n="nav_home">Home</a>
+      <a class="nav-item" href="index.html#products" data-i18n="nav_shop">Shop</a>
+      <a class="nav-item" href="guia-tallas.html" data-i18n="nav_sizes_guide">Sizes guide</a>
+      <a class="nav-item" href="index.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="header-utils">
+      <div class="lang-selector">
+        <button type="button" class="lang-option utils-btn" data-lang="es" aria-pressed="false">ES</button>
+        <span class="lang-sep">/</span>
+        <button type="button" class="lang-option utils-btn" data-lang="en" aria-pressed="true">EN</button>
+      </div>
+      <button type="button" class="icon-btn cart-trigger" aria-label="Cart">
+        <span class="cart-count" id="cart-count" hidden>0</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </button>
+    </div>
+    <button type="button" class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main class="size-guide-page">
+    <div class="container container--narrow">
+      <h1 class="size-guide__title" data-i18n="size_guide_title">Greyhound Size Guide</h1>
+
+      <div class="size-guide__drawing">
+        <svg class="greyhound-drawing" viewBox="0 0 280 120" xmlns="http://www.w3.org/2000/svg" aria-labelledby="drawing-desc">
+          <title id="drawing-desc">Greyhound side view showing chest and back measurement points</title>
+          <!-- Greyhound outline - side profile -->
+          <path class="greyhound-outline" d="M30 75 L45 55 L65 45 L85 42 L95 48 L98 58 L92 72 L85 85 L78 95 L72 105 L70 112 L75 115 L95 113 L115 108 L135 102 L155 95 L175 88 L195 82 L215 78 L235 75 L250 72 L260 68 L265 62 L262 55 L252 50 L240 48 L225 50 L210 55 L195 60 L178 64 L160 67 L140 70 L120 72 L100 74 L80 75 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+          <!-- Chest measurement (girth - dashed arc) -->
+          <path class="measure-line" d="M 78 95 Q 95 72 115 88 Q 125 98 112 108 Q 92 115 78 95" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <text x="98" y="65" class="measure-label" text-anchor="middle">Chest</text>
+          <!-- Back measurement (spine length) -->
+          <line class="measure-line" x1="88" y1="90" x2="245" y2="72" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <text x="165" y="78" class="measure-label" text-anchor="middle">Back</text>
+        </svg>
+      </div>
+
+      <div class="size-guide__table-wrap">
+        <table class="size-guide__table">
+          <thead>
+            <tr>
+              <th data-i18n="size_guide_size">Size</th>
+              <th data-i18n="size_guide_chest">Chest (cm)</th>
+              <th data-i18n="size_guide_back">Back (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="size_guide_small">SMALL</td>
+              <td>62–75</td>
+              <td>60–70</td>
+            </tr>
+            <tr>
+              <td data-i18n="size_guide_medium">MEDIUM</td>
+              <td>76–81</td>
+              <td>71–76</td>
+            </tr>
+            <tr>
+              <td data-i18n="size_guide_large">LARGE</td>
+              <td>82–86</td>
+              <td>77–84</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="size-guide__text">
+        <h2 data-i18n="size_guide_how_title">How to measure</h2>
+        <p data-i18n="size_guide_how_text" data-i18n-html="1">Measure your greyhound with a soft tape measure. <strong>Chest</strong>: wrap the tape around the widest part of the chest, just behind the front legs. <strong>Back</strong>: measure from the base of the neck (where the collar sits) along the spine to the base of the tail. Keep the tape snug but not tight. Compare your measurements with the table above to find the best fit.</p>
+      </div>
+
+      <div class="size-guide__notice">
+        <p data-i18n="size_guide_notice">If your dog's measurements fall between two sizes, choose the larger size for a more comfortable fit.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p data-i18n="copyright">© 2026 Llull's. Handmade with care.</p>
+        <nav class="footer-legal">
+          <a href="#" data-i18n="footer_privacy">Privacy policy</a>
+          <a href="#" data-i18n="footer_terms">Terms of service</a>
+          <a href="#" data-i18n="footer_shipping_policy">Shipping policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+  <div class="cart-panel" id="cart-panel" aria-hidden="true">
+    <div class="cart-panel__header">
+      <h2 class="cart-panel__title" data-i18n="cart_title">Your Cart</h2>
+      <button type="button" class="cart-panel__close" id="cart-close" aria-label="Close cart">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-panel__body" id="cart-panel-body">
+      <p class="cart-empty" id="cart-empty" data-i18n="cart_empty">Your cart is empty.</p>
+      <ul class="cart-list" id="cart-list" hidden></ul>
+      <p class="cart-total" id="cart-total" hidden></p>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="cart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
