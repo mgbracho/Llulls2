@@ -1,12 +1,16 @@
-/* --- Variables (Onda Dogs–inspired) --- */
+/* --- Variables (Navy & Cream – premium greyhound) --- */
 :root {
-  --accent: #00a8b4;
-  --accent-dark: #008c96;
-  --accent-light: #7dd3d9;
-  --bg: #ffffff;
-  --text: #1a1a1a;
-  --text-muted: #555;
-  --border: #e8e8e8;
+  --accent: #b8860b;
+  --accent-dark: #9a7209;
+  --accent-light: #d4a843;
+  --bg: #f5f0e8;
+  --text: #1a2a3a;
+  --text-muted: #5a6a7a;
+  --border: #e5dfd5;
+  --hover-bg: #ebe6de;
+  --footer-bg: #1a2a3a;
+  --footer-text: #e8e4e0;
+  --footer-muted: #9a9fa8;
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --header-h: 72px;
@@ -31,8 +35,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* --- Promo banner --- */
 .promo-banner {
-  background: var(--accent);
-  color: white;
+  background: var(--footer-bg);
+  color: var(--footer-text);
   text-align: center;
   padding: 10px 16px;
   font-size: 13px;
@@ -59,7 +63,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   flex-direction: column;
   line-height: 1.1;
-  color: #1e5f73;
+  color: var(--text);
   font-weight: 600;
 }
 .logo-brand {
@@ -126,7 +130,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 10px 16px;
   font-size: 14px;
 }
-.dropdown-menu li a:hover { background: #f5f5f5; color: var(--accent); }
+.dropdown-menu li a:hover { background: var(--hover-bg); color: var(--accent); }
 
 .header-utils {
   display: flex;
@@ -154,7 +158,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text);
   border-radius: 6px;
 }
-.icon-btn:hover { background: #f0f9fa; color: var(--accent); }
+.icon-btn:hover { background: var(--hover-bg); color: var(--accent); }
 
 .cart-trigger {
   position: relative;
@@ -230,7 +234,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-muted);
   border-radius: 6px;
 }
-.cart-panel__close:hover { color: var(--accent); background: #f0f9fa; }
+.cart-panel__close:hover { color: var(--accent); background: var(--hover-bg); }
 .cart-panel__body {
   flex: 1;
   overflow-y: auto;
@@ -258,7 +262,7 @@ img { max-width: 100%; height: auto; display: block; }
   width: 72px;
   height: 72px;
   flex-shrink: 0;
-  background: #f5f5f5;
+  background: var(--hover-bg);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -298,7 +302,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-muted);
   border-radius: 6px;
 }
-.cart-item__remove:hover { color: #c00; background: #fff0f0; }
+.cart-item__remove:hover { color: #a63d3d; background: #f5e8e8; }
 .cart-total {
   font-size: 1.1rem;
   font-weight: 600;
@@ -337,7 +341,7 @@ body.cart-open { overflow: hidden; }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-color: var(--accent);
+  background-color: var(--footer-bg);
   background-size: cover;
   background-position: center;
 }
@@ -351,7 +355,7 @@ body.cart-open { overflow: hidden; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,168,180,0.85) 0%, rgba(0,140,150,0.9) 100%);
+  background: linear-gradient(135deg, rgba(26,42,58,0.88) 0%, rgba(26,42,58,0.92) 100%);
 }
 .hero-overlay {
   position: relative;
@@ -381,13 +385,13 @@ body.cart-open { overflow: hidden; }
 }
 .btn-hero {
   background: white;
-  color: var(--accent);
+  color: var(--footer-bg);
   border: 2px solid rgba(255,255,255,0.9);
 }
 .btn-hero:hover {
   background: rgba(255,255,255,0.95);
   border-color: white;
-  color: var(--accent-dark);
+  color: var(--footer-bg);
 }
 .btn-outline {
   border: 2px solid var(--accent);
@@ -437,11 +441,11 @@ body.cart-open { overflow: hidden; }
   overflow: hidden;
   transition: box-shadow 0.2s;
 }
-.product-card:hover { box-shadow: 0 8px 30px rgba(0,168,180,0.12); }
+.product-card:hover { box-shadow: 0 8px 30px rgba(184,134,11,0.15); }
 .product-link { display: block; color: inherit; }
 .product-image {
   aspect-ratio: 6/7;
-  background: #f8f8f8;
+  background: var(--hover-bg);
   overflow: hidden;
 }
 .product-image img {
@@ -470,7 +474,7 @@ body.cart-open { overflow: hidden; }
 }
 
 /* --- Collection --- */
-.collection { background: #fafafa; }
+.collection { background: rgba(0,0,0,0.02); }
 .collection .section-subtitle {
   margin-bottom: 24px;
 }
@@ -496,7 +500,7 @@ body.cart-open { overflow: hidden; }
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 5/4;
-  background: #f0f9fa;
+  background: var(--hover-bg);
 }
 .snoods-image img {
   width: 100%;
@@ -507,7 +511,7 @@ body.cart-open { overflow: hidden; }
 /* --- About --- */
 .about {
   padding: 56px 0;
-  background: #f5fafa;
+  background: var(--hover-bg);
   text-align: center;
 }
 .about-lead {
@@ -523,8 +527,8 @@ body.cart-open { overflow: hidden; }
 
 /* --- Footer --- */
 .footer {
-  background: #1a1a1a;
-  color: #ccc;
+  background: var(--footer-bg);
+  color: var(--footer-text);
   padding: 48px 0 24px;
 }
 .footer-grid {
@@ -534,7 +538,7 @@ body.cart-open { overflow: hidden; }
   margin-bottom: 40px;
 }
 .footer-col h4 {
-  color: white;
+  color: var(--footer-text);
   font-size: 14px;
   font-weight: 600;
   margin: 0 0 16px;
@@ -548,16 +552,16 @@ body.cart-open { overflow: hidden; }
 }
 .footer-bottom {
   padding-top: 24px;
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
-.footer-bottom p { margin: 0; font-size: 13px; color: #888; }
+.footer-bottom p { margin: 0; font-size: 13px; color: var(--footer-muted); }
 .footer-legal { display: flex; gap: 20px; }
-.footer-legal a { font-size: 13px; color: #888; }
+.footer-legal a { font-size: 13px; color: var(--footer-muted); }
 .footer-legal a:hover { color: var(--accent-light); }
 
 /* --- Product detail page --- */
@@ -588,7 +592,7 @@ body.cart-open { overflow: hidden; }
   align-items: start;
 }
 .product-detail__image-wrap {
-  background: #f8f8f8;
+  background: var(--hover-bg);
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 6/7;
@@ -647,7 +651,7 @@ body.cart-open { overflow: hidden; }
 }
 .size-option:hover {
   border-color: var(--accent-light);
-  background: #f0f9fa;
+  background: var(--hover-bg);
 }
 .size-option.selected {
   border-color: var(--accent);
