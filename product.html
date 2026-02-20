@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | Llull's</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="promo-banner">
+    FREE shipping in Europe on orders over €100 — Spain orders over €60
+  </div>
+
+  <header class="header">
+    <a href="index.html" class="logo">
+      <span class="logo-brand">Llull's</span>
+    </a>
+    <nav class="nav-main">
+      <a class="nav-item" href="index.html">Home</a>
+      <a class="nav-item" href="index.html#products">Shop</a>
+      <a class="nav-item" href="index.html#products">Sizes guide</a>
+      <a class="nav-item" href="index.html">Contact</a>
+    </nav>
+    <div class="header-utils">
+      <button type="button" class="icon-btn" aria-label="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></button>
+    </div>
+    <button type="button" class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main class="product-detail-page">
+    <div class="container container--product">
+      <a href="index.html#products" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </a>
+
+      <div id="product-content" class="product-detail">
+        <!-- Filled by product.js -->
+      </div>
+
+      <div id="product-not-found" class="product-not-found" hidden>
+        <p>Product not found.</p>
+        <a href="index.html#products" class="btn btn-outline">Back to shop</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="products.js"></script>
+  <script src="product.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
